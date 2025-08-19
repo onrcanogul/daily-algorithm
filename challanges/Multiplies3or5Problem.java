@@ -2,7 +2,7 @@ package challanges;
 
 import java.util.stream.IntStream;
 
-public class Multiplies3or5 {
+public class Multiplies3or5Problem {
 
     //If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
     //

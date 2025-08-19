@@ -3,7 +3,7 @@ package challanges;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class ToJadenCase {
+public class ToJadenCaseProblem {
 
     //Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013).
     // Jaden is also known for some of his philosophy that he delivers via Twitter.
@@ -30,16 +30,16 @@ public class ToJadenCase {
         return createdWords.toString();
     }
 
-    //stream solution
     public static String upperFirstLetter(String word) {
         return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 
+    //stream solution
     public static String toJadenCaseStream(String phrase) {
         if (null == phrase || phrase.isEmpty()) return null;
 
         return Arrays.stream(phrase.split(" "))
-                .map(ToJadenCase::upperFirstLetter)
+                .map(ToJadenCaseProblem::upperFirstLetter)
                 .collect(Collectors.joining(" "));
     }
 }

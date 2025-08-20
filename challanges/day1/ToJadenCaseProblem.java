@@ -1,4 +1,4 @@
-package challanges;
+package challanges.day1;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

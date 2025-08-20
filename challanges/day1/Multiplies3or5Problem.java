@@ -1,4 +1,4 @@
-package challanges;
+package challanges.day1;
 
 import java.util.stream.IntStream;
 

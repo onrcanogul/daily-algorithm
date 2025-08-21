@@ -1,4 +1,4 @@
-package challanges.day2;
+package challanges.day3;
 
 import java.math.BigInteger;
 

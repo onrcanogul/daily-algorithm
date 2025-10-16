@@ -21,20 +21,24 @@ public class LeetCode3 {
     Explanation: The answer is "wke", with the length of 3.
     Notice that the answer must be a substring, "pwke" is a subsequence and not a substring. */
     public static int lengthOfLongestSubstring(String s) {
-        List<String> substrings = new ArrayList<>();
         String word = "";
-        for (int i = 0; i < s.length() ; i++) {
-            if(word.contains(String.valueOf(s.charAt(i)))) word = new String();
-            word += s.charAt(i);
-            substrings.add(word);
+        int maxLen = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (word.contains(String.valueOf(c))) {
+                int index = word.indexOf(c);
+                word = word.substring(index + 1);
+            }
+            word += c;
+            maxLen = Math.max(maxLen, word.length());
         }
-        String longest = substrings.stream()
-                .max(Comparator.comparingInt(String::length)).orElse("");
-        return longest.length();
+
+        return maxLen;
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 
 }
